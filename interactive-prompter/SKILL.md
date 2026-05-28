@@ -1,13 +1,12 @@
 ﻿---
 name: interactive-prompter
-description: "Used to run a structured change-management pre-flight survey to capture explicit deployment variables from an operator."
+description: "Triggers a structural user-facing pre-flight deployment survey to gather ticket metadata."
 ---
-# Phase 2: Structural Metadata Gathering Instructions
-Before processing any change request, you must interview the on-call engineer for configuration parameters. Do not use third-party interactive libraries. 
-
-You must strictly use the native `ask_user` tool schema to open interactive, consecutive terminal selection boxes for these parameters:
-
-1. **Jira Space**: (Choices: SYSLIN, CLOUD, APPS)
-2. **Ticket Type**: (Choices: Task, Normal Change, Emergency Change)
-3. **Environment**: (Choices: PROD, QA, UAT)
-4. **Impact Level**: (Choices: Minor, Moderate, Significant)
+# Phase 2: Pre-Flight Metadata Survey
+1. Force an interactive questionnaire loop using the native `ask_user` tool schema.
+2. Prompt the operator sequentially for these 4 exact fields:
+   - **Jira Space**: Options: `SYSLIN`, `CLOUD`, `APPS`
+   - **Ticket Type**: Options: `Task`, `Normal Change`, `Emergency Change`
+   - **Environment**: Options: `PROD`, `QA`, `UAT`
+   - **Impact Level**: Options: `Minor`, `Moderate`, `Significant`
+3. Present a final summary table to the user to review and submit.
