@@ -1,0 +1,9 @@
+{
+  "name": "autonomous-sre-extension",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "zod": "^3.22.4"
+  }
+}

@@ -1,0 +1,4 @@
+[    0.000000] Linux version 4.18.0-348.el8.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 8.5.0 20210514 (Red Hat 8.5.0-3) (GCC)) #1 SMP Tue Oct 19 15:14:20 UTC 2021
+[    0.000000] Command line: BOOT_IMAGE=(hd0,msdos1)/vmlinuz-4.18.0-348.el8.x86_64 root=/dev/mapper/cs-root ro crashkernel=auto resume=/dev/mapper/cs-swap rd.lvm.lv=cs/root rd.lvm.lv=cs/swap
+[ 1620.987654] java invoked oom-killer: gfp_mask=0x100cca(GFP_HIGHUSER_MOVABLE), order=0, oom_score_adj=0
+[ 1620.987705] Out of memory: Killed process 14502 (java) total-vm:8543210kB, anon-rss:7654320kB, file-rss:0kB, shmem-rss:0kB, UID:1001 pgtables:14560kB oom_score_adj:0

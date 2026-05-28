@@ -1,0 +1,15 @@
+# Root Cause Analysis Summary
+## Event Overview
+The server 'ue2ul-app01' went down due to a critical kernel event that led to the termination of the primary application process.
+
+## Precise Failure String
+[ 1620.987705] Out of memory: Killed process 14502 (java) total-vm:8543210kB, anon-rss:7654320kB, file-rss:0kB, shmem-rss:0kB, UID:1001 pgtables:14560kB oom_score_adj:0
+
+## Root Cause
+The system encountered an Out-Of-Memory (OOM) condition. The Linux kernel's OOM Killer was invoked and selected the 'java' process (PID 14502) for termination to reclaim memory and prevent a total system hang. The process was consuming approximately 7.6 GB of Resident Set Size (RSS) memory at the time of termination.
+
+## Engineered Technical Solution
+1. **Memory Tuning**: Evaluate and increase the JVM maximum heap size (-Xmx) if the physical memory allows, or optimize the application to reduce its memory footprint.
+2. **Resource Allocation**: Increase the server's physical RAM if the workload consistently exceeds current capacity.
+3. **Memory Leak Investigation**: Perform a heap dump analysis (using tools like Eclipse MAT or VisualVM) to identify potential memory leaks within the Java application.
+4. **OOM Scoring**: If the Java process is critical and should be protected from the OOM Killer (at the risk of system stability), adjust its /proc/[pid]/oom_score_adj value, though this is a temporary workaround.

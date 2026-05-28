@@ -1,0 +1,16 @@
+May 20 03:15:01 ue2ul-app01 systemd[1]: Started Session 45 of user root.
+May 20 03:17:22 ue2ul-app01 kernel: [ 1456.123456] TCP: node0: Peer 10.195.22.50:443/45212 unexpectedly shrunk window
+May 20 03:20:15 ue2ul-app01 kernel: [ 1620.987654] java invoked oom-killer: gfp_mask=0x100cca(GFP_HIGHUSER_MOVABLE), order=0, oom_score_adj=0
+May 20 03:20:15 ue2ul-app01 kernel: [ 1620.987660] CPU: 2 PID: 14502 Comm: java Not tainted 4.18.0-348.el8.x86_64 #1
+May 20 03:20:15 ue2ul-app01 kernel: [ 1620.987662] Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 12/12/2018
+May 20 03:20:15 ue2ul-app01 kernel: [ 1620.987664] Call Trace:
+May 20 03:20:15 ue2ul-app01 kernel: [ 1620.987675]  dump_stack+0x5c/0x80
+May 20 03:20:15 ue2ul-app01 kernel: [ 1620.987680]  dump_header+0x4a/0x1f2
+May 20 03:20:15 ue2ul-app01 kernel: [ 1620.987684]  oom_kill_process.cold.30+0xb/0x1cf
+May 20 03:20:15 ue2ul-app01 kernel: [ 1620.987687]  out_of_memory+0x1d1/0x4f0
+May 20 03:20:15 ue2ul-app01 kernel: [ 1620.987695] Mem-Info:
+May 20 03:20:15 ue2ul-app01 kernel: [ 1620.987700] active_anon:1456780 inactive_anon:456789 isolated_anon:0
+May 20 03:20:15 ue2ul-app01 kernel: [ 1620.987705] Out of memory: Killed process 14502 (java) total-vm:8543210kB, anon-rss:7654320kB, file-rss:0kB, shmem-rss:0kB, UID:1001 pgtables:14560kB oom_score_adj:0
+May 20 03:20:15 ue2ul-app01 systemd[1]: tomcat.service: Main process exited, code=killed, status=9/KILL
+May 20 03:20:15 ue2ul-app01 systemd[1]: tomcat.service: Failed with result 'signal'.
+May 20 03:20:15 ue2ul-app01 systemd[1]: tomcat.service: Consumed 2h 15min 23.145s CPU time.
