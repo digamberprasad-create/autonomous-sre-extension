@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "custom-sre-mcp": {
+      "command": "node server.js",
+      "args": []
+    }
+  }
+}
