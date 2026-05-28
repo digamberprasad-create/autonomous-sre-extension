@@ -1,0 +1,11 @@
+﻿{
+  "name": "autonomous-sre-extension",
+  "version": "1.0.0",
+  "mcpServers": {
+    "atlassian-mcp": {
+      "command": "npx",
+      "args": ["-y", "@atlassian/atlassian-mcp-server"]
+    }
+  },
+  "contextFileName": "rca-analyst/SKILL.md"
+}
